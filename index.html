@@ -1,80 +1,80 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Makerspace PWG — Werkzeuge & Navigation (fixed)</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#f7fbff; --card:#ffffff; --blue:#1e6fe6; --blue-dark:#234a8a;
-    --muted:#6b7280; --max-width:1100px; --nav-h:72px; --radius:12px;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-    background:linear-gradient(180deg,var(--bg),#fff 60%);color:#0f1724;line-height:1.45;
-    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;
-  }
-  .wrap{max-width:var(--max-width);margin:0 auto;padding:0 18px;}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Makerspace PWG — Werkzeuge (angepasst)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fbff; --card:#ffffff; --blue:#1e6fe6; --blue-dark:#234a8a;
+      --muted:#6b7280; --max-width:1100px; --nav-h:72px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg),#fff 60%);color:#0f1724;line-height:1.45;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;
+    }
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:0 18px;}
 
-  /* Fixed top bar (always visible) */
-  header{
-    position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:400;
-    background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));
-    border-bottom:1px solid rgba(35,74,138,0.06);backdrop-filter:blur(6px);
-  }
-  .nav-inner{max-width:var(--max-width);margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:12px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#dbe9ff,#7ea6ff);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
-  .brand h1{font-size:1rem;margin:0}
-  /* Primary nav */
-  nav.primary{display:flex;gap:8px;align-items:center}
-  .nav-btn{
-    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:transparent;border:0;color:var(--blue-dark);font-weight:700;text-decoration:none;cursor:pointer;
-    transition:all .15s ease;font-size:.95rem;
-  }
-  .nav-btn:hover{background:rgba(30,111,230,0.06)}
-  .nav-btn.active{background:linear-gradient(90deg,#e6f0ff,#f7fbff);box-shadow:0 8px 20px rgba(30,111,230,0.06)}
-  .cta{background:var(--blue);color:#fff;padding:10px 14px;border-radius:14px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(30,111,230,0.12)}
+    /* Fixed top bar (always visible) */
+    header{
+      position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:400;
+      background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));
+      border-bottom:1px solid rgba(35,74,138,0.06);backdrop-filter:blur(6px);
+    }
+    .nav-inner{max-width:var(--max-width);margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#dbe9ff,#7ea6ff);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+    .brand h1{font-size:1rem;margin:0}
+    /* Primary nav */
+    nav.primary{display:flex;gap:8px;align-items:center}
+    .nav-btn{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:transparent;border:0;color:var(--blue-dark);font-weight:700;text-decoration:none;cursor:pointer;
+      transition:all .15s ease;font-size:.95rem;
+    }
+    .nav-btn:hover{background:rgba(30,111,230,0.06)}
+    .nav-btn.active{background:linear-gradient(90deg,#e6f0ff,#f7fbff);box-shadow:0 8px 20px rgba(30,111,230,0.06)}
+    .cta{background:var(--blue);color:#fff;padding:10px 14px;border-radius:14px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(30,111,230,0.12)}
 
-  /* Ensure main content not hidden under header */
-  main{padding-top:calc(var(--nav-h) + 18px);}
+    /* Ensure main content not hidden under header */
+    main{padding-top:calc(var(--nav-h) + 18px);}
 
-  /* Layout */
-  section{padding:44px 0;scroll-margin-top:calc(var(--nav-h) + 12px)}
-  .hero{display:flex;flex-direction:column;gap:12px}
-  .hero-card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 12px 30px rgba(15,23,36,0.04)}
-  .kicker{color:var(--blue-dark);font-weight:700}
-  .title{font-size:1.9rem;margin:6px 0 0;font-weight:800}
-  .subtitle{color:var(--muted);font-style:italic}
+    /* Layout */
+    section{padding:44px 0;scroll-margin-top:calc(var(--nav-h) + 12px)}
+    .hero{display:flex;flex-direction:column;gap:12px}
+    .hero-card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 12px 30px rgba(15,23,36,0.04)}
+    .kicker{color:var(--blue-dark);font-weight:700}
+    .title{font-size:1.9rem;margin:6px 0 0;font-weight:800}
+    .subtitle{color:var(--muted);font-style:italic}
 
-  /* Tools gallery */
-  .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:18px;align-items:start}
-  .tool-card{
-    background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(35,74,138,0.04);
-    display:flex;flex-direction:column;align-items:center;gap:12px;min-height:220px;transition:transform .18s ease,box-shadow .18s ease;
-  }
-  .tool-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,23,36,0.06)}
-  .tool-img{width:120px;height:120px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:linear-gradient(180deg,#fff,#f3f8ff);padding:8px}
-  .tool-title{font-weight:800}
-  .tool-desc{color:var(--muted);font-size:.95rem;text-align:center}
+    /* Tools gallery (images and texts removed) */
+    .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:18px;align-items:start}
+    .tool-card{
+      background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(35,74,138,0.04);
+      display:flex;flex-direction:column;align-items:center;gap:12px;min-height:180px;transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .tool-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,23,36,0.06)}
+    .tool-placeholder{
+      width:100%;height:120px;border-radius:10px;background:linear-gradient(180deg,#fff,#f3f8ff);display:block;
+      border:1px dashed rgba(35,74,138,0.06);
+    }
 
-  /* Scroll reveal */
-  .reveal{opacity:0;transform:translateY(18px) scale(.98);transition:opacity .6s cubic-bezier(.2,.9,.2,1),transform .6s cubic-bezier(.2,.9,.2,1)}
-  .reveal.visible{opacity:1;transform:none}
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(18px) scale(.98);transition:opacity .6s cubic-bezier(.2,.9,.2,1),transform .6s cubic-bezier(.2,.9,.2,1)}
+    .reveal.visible{opacity:1;transform:none}
 
-  /* small screens */
-  @media(min-width:900px){
-    .title{font-size:2.6rem}
-    .nav-btn{font-size:1rem;padding:12px 16px}
-    .tool-img{width:140px;height:140px}
-  }
+    @media(min-width:900px){
+      .title{font-size:2.6rem}
+      .nav-btn{font-size:1rem;padding:12px 16px}
+      .tool-placeholder{height:140px}
+    }
 
-  /* Focus */
-  a:focus, button:focus{outline:3px solid rgba(30,111,230,0.14);outline-offset:3px;border-radius:8px}
-</style>
+    /* Focus */
+    a:focus, button:focus{outline:3px solid rgba(30,111,230,0.14);outline-offset:3px;border-radius:8px}
+  </style>
 </head>
 <body>
   <header>
@@ -112,81 +112,28 @@
 
       <div style="margin-top:18px">
         <h3>Organisation</h3>
-        <p class="muted">Weitere Informationen zur Organisation und Projektseite:</p>
-        <p><a href="https://tool-spot-68472803.base44.app" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);font-weight:800">tool-spot-68472803.base44.app</a></p>
+        <p class="muted">Auf der Webseite könnt ihr Werkzeuge lokalisieren.</p>
+        <p style="margin-top:8px">
+          <a href="https://tool-spot-68472803.base44.app" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);font-weight:700;text-decoration:underline">
+            tool-spot-68472803.base44.app
+          </a>
+        </p>
       </div>
 
       <div style="margin-top:22px">
         <h3>Werkzeuge</h3>
         <div class="tools" aria-live="polite">
-          <!-- Schraubenschlüssel (Inline SVG) -->
-          <article class="tool-card reveal" aria-labelledby="t1">
-            <div class="tool-img" aria-hidden="true">
-              <!-- Inline SVG: Schraubenschlüssel -->
-              <svg width="120" height="120" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schraubenschlüssel">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#cfe6ff"/>
-                    <stop offset="1" stop-color="#7ea6ff"/>
-                  </linearGradient>
-                </defs>
-                <rect width="64" height="64" rx="12" fill="url(#g1)"/>
-                <g transform="translate(8,8)" fill="#fff" stroke="#234a8a" stroke-width="1.2">
-                  <path d="M34 2c-2.2 0-4 1.8-4 4 0 .6.15 1.2.4 1.7L18.6 19.5c-1.2-1.1-2.8-1.8-4.6-1.8-4 0-7.2 3.2-7.2 7.2 0 1.8.7 3.4 1.8 4.6L28.3 18.4C28.8 18.6 29.4 18.8 30 18.8c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4z" fill="#fff"/>
-                  <rect x="30" y="18" width="6" height="22" rx="3" fill="#fff"/>
-                </g>
-              </svg>
-            </div>
-            <div id="t1" class="tool-title">Schraubenschlüssel</div>
-            <div class="tool-desc">Universell einsetzbar für Verschraubungen.</div>
+          <!-- Three empty placeholders (images and texts removed as requested) -->
+          <article class="tool-card reveal" aria-hidden="false" aria-label="Werkzeugplatzhalter 1">
+            <div class="tool-placeholder" role="img" aria-label="Platzhalter für Werkzeug 1"></div>
           </article>
 
-          <!-- Bohrmaschine (Inline SVG) -->
-          <article class="tool-card reveal" aria-labelledby="t2">
-            <div class="tool-img" aria-hidden="true">
-              <!-- Inline SVG: Bohrmaschine -->
-              <svg width="120" height="120" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bohrmaschine">
-                <defs>
-                  <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#e6f0ff"/>
-                    <stop offset="1" stop-color="#6b93e6"/>
-                  </linearGradient>
-                </defs>
-                <rect width="64" height="64" rx="12" fill="url(#g2)"/>
-                <g transform="translate(10,12)" fill="#fff" stroke="#234a8a" stroke-width="1">
-                  <rect x="2" y="6" width="28" height="10" rx="3" fill="#fff"/>
-                  <path d="M30 8c3 0 6 2 6 5v6h-6v-11z" fill="#fff"/>
-                  <rect x="6" y="18" width="22" height="6" rx="2" fill="#fff"/>
-                  <path d="M34 22l8 0" stroke="#234a8a" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="8" cy="10" r="2" fill="#234a8a"/>
-                </g>
-              </svg>
-            </div>
-            <div id="t2" class="tool-title">Bohrmaschine</div>
-            <div class="tool-desc">Für präzises Bohren in Holz und Metall.</div>
+          <article class="tool-card reveal" aria-hidden="false" aria-label="Werkzeugplatzhalter 2">
+            <div class="tool-placeholder" role="img" aria-label="Platzhalter für Werkzeug 2"></div>
           </article>
 
-          <!-- Fuchsschwanz / Handsäge (Inline SVG) -->
-          <article class="tool-card reveal" aria-labelledby="t3">
-            <div class="tool-img" aria-hidden="true">
-              <!-- Inline SVG: Fuchsschwanz -->
-              <svg width="120" height="120" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fuchsschwanz">
-                <defs>
-                  <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#fff"/>
-                    <stop offset="1" stop-color="#cfe6ff"/>
-                  </linearGradient>
-                </defs>
-                <rect width="64" height="64" rx="12" fill="url(#g3)"/>
-                <g transform="translate(8,12)" fill="#fff" stroke="#234a8a" stroke-width="1">
-                  <path d="M2 36c0-1 0-2 1-3L34 4c1-1 3-1 4 0 1 1 1 3 0 4L7 37c-1 1-2 1-3 1z" fill="#fff"/>
-                  <rect x="34" y="2" width="6" height="28" rx="2" fill="#fff"/>
-                  <path d="M6 34h28" stroke="#234a8a" stroke-width="1.5" stroke-linecap="round"/>
-                </g>
-              </svg>
-            </div>
-            <div id="t3" class="tool-title">Fuchsschwanz</div>
-            <div class="tool-desc">Handliche Säge für Holzarbeiten.</div>
+          <article class="tool-card reveal" aria-hidden="false" aria-label="Werkzeugplatzhalter 3">
+            <div class="tool-placeholder" role="img" aria-label="Platzhalter für Werkzeug 3"></div>
           </article>
         </div>
       </div>
@@ -212,19 +159,17 @@
 
   <script>
     (function(){
-      // Smooth scroll + fixed nav active state
+      // ScrollSpy + smooth scroll
       const navBtns = document.querySelectorAll('.nav-btn');
       function setActive(id){
         navBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-target') === id));
       }
-      // IntersectionObserver for ScrollSpy
       const sections = document.querySelectorAll('section[id]');
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => { if(e.isIntersecting) setActive(e.target.id); });
       }, {root:null,rootMargin:'-30% 0px -50% 0px',threshold:0});
       sections.forEach(s => io.observe(s));
 
-      // Smooth scroll for nav buttons
       document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -234,7 +179,7 @@
         });
       });
 
-      // Reveal animations for tool cards and other reveals
+      // Reveal animations
       const reveals = document.querySelectorAll('.reveal');
       const revealObs = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -246,11 +191,11 @@
       }, {root:null,threshold:0.12});
       reveals.forEach(r => revealObs.observe(r));
 
-      // Small parallax effect for tool images on scroll (subtle)
+      // Subtle parallax for placeholders (optional)
       window.addEventListener('scroll', () => {
-        document.querySelectorAll('.tool-img').forEach((el, i) => {
+        document.querySelectorAll('.tool-placeholder').forEach((el) => {
           const rect = el.getBoundingClientRect();
-          const offset = Math.max(-40, Math.min(40, (rect.top - window.innerHeight/2) * 0.06));
+          const offset = Math.max(-24, Math.min(24, (rect.top - window.innerHeight/2) * 0.04));
           el.style.transform = `translateY(${offset}px)`;
         });
       }, {passive:true});
