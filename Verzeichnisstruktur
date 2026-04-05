@@ -1,0 +1,12 @@
+/my-site
+├── index.html
+├── css
+│   └── styles.css
+├── js
+│   └── main.js
+├── fonts
+│   ├── CharisSIL-Regular.woff2
+│   ├── CharisSIL-Bold.woff2
+│   └── OFL.txt
+└── images
+    └── ...
